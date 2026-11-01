@@ -1,0 +1,69 @@
+# Environment
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+venv/
+env/
+
+# Database
+*.db
+*.sqlite3
+
+# Audio temp files
+temp_audio/
+uploads/
+
+# Flutter
+frontend/.dart_tool/
+frontend/.packages
+frontend/build/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.idea/
+frontend/*.iml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+build/
+
+# Android temporary files
+.kotlin/
+**/.kotlin/
+
+# Logs and temporary outputs
+*_output.txt
+test_results.txt
+
+# IDE
+.idea/
+.vscode/
