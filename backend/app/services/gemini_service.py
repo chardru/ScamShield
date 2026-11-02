@@ -125,7 +125,7 @@ async def analyze_with_gemini(text: str) -> Optional[Dict[str, Any]]:
             "responseMimeType": "application/json",
             "responseSchema": RESPONSE_SCHEMA,
             "maxOutputTokens": 512,
-            "temperature": 0.1,
+            
         },
     }
 

@@ -50,7 +50,12 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Analyze a conversation'), findsOneWidget);
     expect(find.text('Text'), findsOneWidget);
-    expect(find.text('Audio'), findsOneWidget);
+    expect(find.text('Audio file'), findsOneWidget);
+    expect(find.text('Live audio'), findsOneWidget);
+    await tester.tap(find.text('Live audio'));
+    await tester.pumpAndSettle();
+    expect(find.text('Live microphone monitoring'), findsOneWidget);
+    expect(find.text('Start monitoring'), findsOneWidget);
   });
 
   testWidgets('trusted contacts validates input and accepts a family member', (

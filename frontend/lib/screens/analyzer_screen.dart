@@ -6,6 +6,7 @@ import '../api/api_models.dart';
 import '../main.dart';
 import '../theme.dart';
 import '../widgets/common_widgets.dart';
+import '../widgets/live_audio_panel.dart';
 
 class AnalyzerScreen extends ConsumerStatefulWidget {
   const AnalyzerScreen({super.key});
@@ -49,13 +50,17 @@ class _AnalyzerScreenState extends ConsumerState<AnalyzerScreen> {
         ),
         const SizedBox(height: 22),
         DefaultTabController(
-          length: 2,
+          length: 3,
           child: Column(
             children: [
               const TabBar(
                 tabs: [
                   Tab(icon: Icon(Icons.chat_bubble_outline), text: 'Text'),
-                  Tab(icon: Icon(Icons.audio_file_outlined), text: 'Audio'),
+                  Tab(
+                    icon: Icon(Icons.audio_file_outlined),
+                    text: 'Audio file',
+                  ),
+                  Tab(icon: Icon(Icons.mic_none), text: 'Live audio'),
                 ],
               ),
               SizedBox(
@@ -64,6 +69,7 @@ class _AnalyzerScreenState extends ConsumerState<AnalyzerScreen> {
                   children: [
                     _buildTextPanel(context),
                     _buildAudioPanel(context, maxAudioSizeMb: maxAudioSizeMb),
+                    LiveAudioPanel(apiBaseUrl: ref.read(apiProvider).baseUrl),
                   ],
                 ),
               ),
